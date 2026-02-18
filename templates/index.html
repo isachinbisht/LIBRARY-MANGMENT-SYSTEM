@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Library Login</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial;
+    background:#f5f0e6;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.login-box{
+    background:white;
+    padding:40px;
+    border-radius:12px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+    width:300px;
+    text-align:center;
+}
+
+h2{
+    color:#4b2e2e;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    border:1px solid #8b5e3c;
+    border-radius:5px;
+}
+
+button{
+    width:100%;
+    padding:10px;
+    background:#4b2e2e;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#8b5e3c;
+}
+</style>
+
+</head>
+<body>
+
+<div class="login-box">
+<h2>Library Login</h2>
+
+<form method="POST">
+<input type="text" name="username" placeholder="Username" required>
+<input type="password" name="password" placeholder="Password" required>
+<button type="submit">Login</button>
+</form>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Books</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial;
+    background:#f5f0e6;
+}
+
+.container{
+    width:70%;
+    margin:50px auto;
+    background:white;
+    padding:40px;
+    border-radius:12px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+h1{
+    text-align:center;
+    color:#4b2e2e;
+}
+
+ul{
+    list-style:none;
+    padding:0;
+}
+
+li{
+    background:#fdf8f3;
+    padding:12px;
+    margin:10px 0;
+    border-left:5px solid #4b2e2e;
+    border-radius:6px;
+}
+
+a{
+    color:#8b5e3c;
+    font-weight:bold;
+    margin-left:15px;
+    text-decoration:none;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+<h1>Available Books</h1>
+
+<ul>
+{% for book in books %}
+<li>
+{{ book.title }} - {{ book.author }}
+<a href="/issue/{{ book.id }}">Issue</a>
+</li>
+{% endfor %}
+</ul>
+
+<br>
+<a href="/logout">Logout</a>
+</div>
+
+</body>
+</html>

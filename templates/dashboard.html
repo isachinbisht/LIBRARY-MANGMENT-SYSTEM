@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Dashboard</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f5f0e6; /* Beige */
+}
+
+.container{
+    background:#ffffff;
+    margin:50px auto;
+    padding:40px;
+    width:70%;
+    border-radius:12px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+h1{
+    text-align:center;
+    color:#4b2e2e; /* Dark Brown */
+}
+
+form{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+input{
+    padding:10px;
+    margin:5px;
+    border:1px solid #8b5e3c;
+    border-radius:5px;
+}
+
+button{
+    padding:10px 20px;
+    background:#4b2e2e;
+    border:none;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#8b5e3c;
+}
+
+ul{
+    list-style:none;
+    padding:0;
+}
+
+li{
+    background:#fdf8f3;
+    padding:10px;
+    margin:8px 0;
+    border-left:5px solid #4b2e2e;
+    border-radius:6px;
+}
+
+a{
+    color:#4b2e2e;
+    font-weight:bold;
+    text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+<h1>Admin Dashboard</h1>
+
+<form method="POST" action="/add_book">
+<input type="text" name="title" placeholder="Book Title" required>
+<input type="text" name="author" placeholder="Author" required>
+<button type="submit">Add Book</button>
+</form>
+
+<h2>All Books</h2>
+<ul>
+{% for book in books %}
+<li>{{ book.title }} - {{ book.author }}</li>
+{% endfor %}
+</ul>
+
+<br>
+<a href="/logout">Logout</a>
+</div>
+</body>
+</html>
